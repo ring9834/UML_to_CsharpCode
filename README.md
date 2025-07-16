@@ -54,7 +54,7 @@ Code Example and Explanation
     }
 ```
 
-## Aggregation
+## Composition
 It is a stronger form of aggregation where the part cannot exist without the whole, and depicted with a filled diamond on the "whole" side, indicating that the lifecycle of the part is tied to the whole. 
 
 Composition is implemented similarly to aggregation but with tighter control over the part’s lifecycle. ***The part is typically created and destroyed along with the whole.***
