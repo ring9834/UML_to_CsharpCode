@@ -4,9 +4,7 @@ In Unified Modeling Language (UML), relationships between classes are used to mo
 ## Association
 It represents a general relationship between two classes where objects of one class can be related to objects of another class. It is often a "has-a" or "uses-a" relationship, depicted as a solid line between classes, sometimes with multiplicity such as 1..*, 0..1.
 
-<div style="text-align: center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Uml_classes_en.svg/1920px-Uml_classes_en.svg.png" alt="UML" width="300">
-</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Uml_classes_en.svg/1920px-Uml_classes_en.svg.png" alt="UML" style="display: block; margin-left: auto; margin-right: auto;" width="300">
 
 ### C# Implementation
 Associations are typically implemented using fields, properties, or collections to reference objects of another class.
