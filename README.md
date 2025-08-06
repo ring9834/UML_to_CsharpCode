@@ -121,16 +121,21 @@ The Car class realizes the IVehicle interface by implementing its Drive method. 
 
 Code Example == Interface ==
 ```sh
-    public class Animal
+﻿namespace UML_to_CsharpCode
+{
+    public interface IVehicle
     {
-        public string Name { get; set; }
-        public virtual void MakeSound() { Console.WriteLine("Some sound"); }
+        void Drive();
     }
 
-    public class Dog : Animal // Generalization
+    public class Truck : IVehicle // Realization
     {
-        public override void MakeSound() { Console.WriteLine("Woof"); }
+        public void Drive()
+        {
+            Console.WriteLine("Truck is driving");
+        }
     }
+}
 ```
 
 Code Example == Abstract ==
