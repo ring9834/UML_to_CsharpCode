@@ -1,10 +1,10 @@
 # Relationships in UML Reflected on C# code
 In Unified Modeling Language (UML), relationships between classes are used to model how objects interact or are structured in a system. These relationships are then reflected in C# code through specific programming constructs. Below is the explanation of the key UML relationships—Association, Aggregation, Composition, Generalization (Inheritance), Realization, and Dependency and how they are implemented in C# code.
 
-## Association
-It represents a general relationship between two classes where objects of one class can be related to objects of another class. It is often a "has-a" or "uses-a" relationship, depicted as a solid line between classes, sometimes with multiplicity such as 1..*, 0..1.
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Uml_classes_en.svg/1920px-Uml_classes_en.svg.png" alt="UML" style="display: block; margin-left: auto; margin-right: auto; width: 300px;">
+
+## Association
+It represents a general relationship between two classes where objects of one class can be related to objects of another class. It is often a "has-a" relationship, depicted as a solid line between classes, sometimes with multiplicity such as 1..*, 0..1.
 
 ### C# Implementation
 Associations are typically implemented using fields, properties, or collections to reference objects of another class.
@@ -178,7 +178,7 @@ Dog and Cat realize Animal by overriding the abstract Speak() method.
 ```
 
 ## Dependency
-Represents a weaker relationship where one class depends on another, typically because it uses it temporarily, for example, as a method parameter or local variable. It is depicted with a dashed line and an arrow.
+Represents a weaker relationship where one class depends on another, typically because it uses it temporarily ("uses-a"), for example, as a method parameter or local variable. It is depicted with a dashed line and an arrow.
 
 ### C# Implementation
 The Order class depends on the Logger class because it uses it in the ProcessOrder method. However, Order does not maintain a reference to Logger, reflecting the ***temporary*** nature of the dependency.
