@@ -178,7 +178,7 @@ Dog and Cat realize Animal by overriding the abstract Speak() method.
 ```
 
 ## Dependency
-Represents a weaker relationship where one class depends on another, typically because it uses it temporarily ("uses-a"), for example, as a method parameter or local variable. It is depicted with a dashed line and an arrow.
+Represents a weaker relationship where one class depends on another, typically because it uses it temporarily ("uses-a"), for example, as a method parameter, local variable, return type. It is depicted with a dashed line and an arrow.
 
 ### C# Implementation
 The Order class depends on the Logger class because it uses it in the ProcessOrder method. However, Order does not maintain a reference to Logger, reflecting the ***temporary*** nature of the dependency.
