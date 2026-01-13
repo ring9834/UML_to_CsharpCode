@@ -1,9 +1,10 @@
 # Relationships in UML Reflected on C# code
 In Unified Modeling Language (UML), relationships between classes are used to model how objects interact or are structured in a system. These relationships are then reflected in C# code through specific programming constructs. Below is the explanation of the key UML relationships—Association, Aggregation, Composition, Generalization (Inheritance), Realization, and Dependency and how they are implemented in C# code.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Uml_classes_en.svg/1920px-Uml_classes_en.svg.png" alt="UML" style="display: block; margin-left: auto; margin-right: auto; width: 300px;">
+
 ## Association
-It represents a general relationship between two classes where objects of one class can be related to objects of another class. It is often a "has-a" or "uses-a" relationship, depicted as a solid line between classes, sometimes with multiplicity such as 1..*, 0..1.
-![UML](https://miro.medium.com/v2/resize:fit:640/format:webp/0*OcXwbrcD2oInENr6.jpg)
+It represents a general relationship between two classes where objects of one class can be related to objects of another class. It is often a "has-a" relationship, depicted as a solid line between classes, sometimes with multiplicity such as 1..*, 0..1.
 
 ### C# Implementation
 Associations are typically implemented using fields, properties, or collections to reference objects of another class.
@@ -53,7 +54,7 @@ Code Example and Explanation
     }
 ```
 
-## Aggregation
+## Composition
 It is a stronger form of aggregation where the part cannot exist without the whole, and depicted with a filled diamond on the "whole" side, indicating that the lifecycle of the part is tied to the whole. 
 
 Composition is implemented similarly to aggregation but with tighter control over the part’s lifecycle. ***The part is typically created and destroyed along with the whole.***
@@ -120,16 +121,21 @@ The Car class realizes the IVehicle interface by implementing its Drive method. 
 
 Code Example == Interface ==
 ```sh
-    public class Animal
+﻿namespace UML_to_CsharpCode
+{
+    public interface IVehicle
     {
-        public string Name { get; set; }
-        public virtual void MakeSound() { Console.WriteLine("Some sound"); }
+        void Drive();
     }
 
-    public class Dog : Animal // Generalization
+    public class Truck : IVehicle // Realization
     {
-        public override void MakeSound() { Console.WriteLine("Woof"); }
+        public void Drive()
+        {
+            Console.WriteLine("Truck is driving");
+        }
     }
+}
 ```
 
 Code Example == Abstract ==
@@ -172,7 +178,7 @@ Dog and Cat realize Animal by overriding the abstract Speak() method.
 ```
 
 ## Dependency
-Represents a weaker relationship where one class depends on another, typically because it uses it temporarily, for example, as a method parameter or local variable. It is depicted with a dashed line and an arrow.
+Represents a weaker relationship where one class depends on another, typically because it uses it temporarily ("uses-a"), for example, as a method parameter, local variable, return type. It is depicted with a dashed line and an arrow.
 
 ### C# Implementation
 The Order class depends on the Logger class because it uses it in the ProcessOrder method. However, Order does not maintain a reference to Logger, reflecting the ***temporary*** nature of the dependency.
