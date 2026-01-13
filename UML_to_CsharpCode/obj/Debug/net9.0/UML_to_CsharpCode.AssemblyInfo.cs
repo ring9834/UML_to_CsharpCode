@@ -15,6 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c272d361fe570dbacf5f2a49f9802f82bd71484")]
 [assembly: System.Reflection.AssemblyProductAttribute("UML_to_CsharpCode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UML_to_CsharpCode")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
